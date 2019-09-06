@@ -32,6 +32,8 @@ public class City {
         Arrays.fill(chars, '+');
         String row2 = new String(chars);
 
+        formatter.close();
+
         return row1 + "\n" + row2;
     }
 
@@ -41,6 +43,8 @@ public class City {
         StringBuilder sb = new StringBuilder();
         Formatter formatter = new Formatter(sb, Locale.US);
         formatter.format("%1$-20s%2$-24s%3$12s%4$10s", name, state, population, area);
+
+        formatter.close();
 
         return sb.toString();
     }
